@@ -13,3 +13,161 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+}
+
+.container-form {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid-2col {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* Navbar */
+
+.navbar-mine {
+  background-color: #f1f3f5;
+  padding: 15px;
+}
+
+.navbar-mine a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* CARD CSS */
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.card-trip-infos {
+  background-color: #f1f3f5;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+}
+
+.card-trip-icons {
+  display: flex;
+}
+
+.card-trip-people {
+  display: flex;
+}
+
+.card-trip-price {
+  display: flex;
+}
+
+.flats-crud {
+  display: flex;
+  gap: 5px;
+}
+
+.flats-crud a {
+  text-decoration: none;
+}
+
+/* SHOW Page */
+.banner {
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+}
+
+.map {
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+}
+
+#container-margin {
+  margin-top: 300px;
+}
+
+.flat-information {
+  margin-top: 300px;
+}
+
+.flat-form {
+  margin-top: 300px;
+}
+
+.flat-information-headers {
+  padding: 10px;
+  background-color: #f1f3f5;
+  margin-bottom: 20px;
+}
+
+.flat-information-content {
+  padding: 10px;
+  background-color: #f1f3f5;
+}
+
+.flat-form-book {
+  padding: 10px;
+  background-color: #f1f3f5;
+  margin-bottom: 20px;
+}
+
+.flat-form-details {
+  padding: 10px;
+  background-color: #f1f3f5;
+  margin-bottom: 20px;
+}
+
+.flat-show-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f1f3f5;
+  margin-bottom: 20px;
+}
+
+.flat-form-details-flex {
+  display: flex;
+  gap: 10px;
+}

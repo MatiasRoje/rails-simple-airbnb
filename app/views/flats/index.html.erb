@@ -1,0 +1,41 @@
+<%= render "flats/navbar" %>
+
+<div class="container">
+  <h1>All our Flats</h1>
+  <p>Our <%= Flat.count %> flats!</p>
+
+  <div class="grid">
+    <% @flats.each do |flat| %>
+      <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+
+        <div class="card-trip-infos">
+          <h2><%= flat.name %></h2>
+          <p><%= flat.description %></p>
+          <p><em><%= flat.address %></em></p>
+        </div>
+
+        <div class="card-trip-icons">
+          <div class="card-trip-people">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>
+            <p><%= flat.number_of_guests %></p>
+          </div>
+          <div class="card-trip-price">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 7.756a4.5 4.5 0 100 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <p><%= flat.price_per_night %></p>
+          </div>
+        </div>
+
+
+          <div class="flats-crud">
+            <div><%= link_to "About this flat", flat_path(flat) %> </div>
+            <div><%= button_to "", edit_flat_path(flat), :class => 'fa-solid fa-pen-to-square btn', method: :get %></div>
+            <div><%= button_to "", flat_path(flat), :class => 'fa-solid fa-trash-can btn', method: :delete %>
+          </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

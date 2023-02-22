@@ -67,3 +67,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# MY GEMS
+
+gem "simple_form", github: "heartcombo/simple_form"
+
+gem "faker"
